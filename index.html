@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт-портфолио gi521fmp45</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#greetings">Приветствие</a></li>
+                <li><a href="#about-me">О себе</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <a href="#" name="greetings"></a>
+        <section class="greetings">
+            <h1 id="greetingText"><div class="type-cursor" id="typeCursor"></div></h1>
+        </section>   
+        <section class="about-me">
+            <a href="#" name="about-me"></a>
+            <h2>О себе</h2>
+            <div class="wrap">
+                <img src="assets/img/computer-icon.png" alt="Иконка компьютера" class="computer-icon">
+                <p>Являюсь веб-разработчиком, обладающим навыками Front-end и <br> Back-end разработки. Создаю кроссбраузерные, адаптивные и валидные шаблоны веб-сайтов из дизайн-макетов. Провожу интеграцию созданного шаблона с CMS Wordpress, реализуя предполагаемый шаблоном функционал.</p>
+            </div>
+            <div class="background-wrap">
+                <h3>Используемые технологии</h3>
+            </div>
+            <div class="tiles">
+                <div class="tile-wrap">
+                    <div class="tile">
+                        <div class="tile-content-wrap"><img src="assets/img/html5-icon.png" alt="HTML5 иконка"></div>
+                    </div>
+                </div>
+                <div class="tile-wrap">
+                    <div class="tile">
+                        <div class="tile-content-wrap"><img src="assets/img/css3-icon.png" alt="CSS3 иконка"></div>
+                    </div>
+                </div>
+                <div class="tile-wrap">
+                    <div class="tile">
+                        <div class="tile-content-wrap"><img src="assets/img/js-icon.png" alt="JavaScript иконка"></div>
+                    </div>
+                </div>
+                <div class="tile-wrap">
+                    <div class="tile">
+                        <div class="tile-content-wrap"><img src="assets/img/jquery-icon.png" alt="jQuery иконка"></div>
+                    </div>
+                </div>
+                <div class="tile-wrap">
+                    <div class="tile">
+                        <div class="tile-content-wrap"><img src="assets/img/sass-icon.png" alt="Sass иконка"></div>
+                    </div>
+                </div>
+                <div class="tile-wrap">
+                    <div class="tile">
+                        <div class="tile-content-wrap"><img src="assets/img/gulp-icon.png" alt="Gulp иконка"></div>
+                    </div>
+                </div>
+                <div class="tile-wrap">
+                    <div class="tile">
+                        <div class="tile-content-wrap"><img src="assets/img/vue-icon.png" alt="Vue иконка"></div>
+                    </div>
+                </div>
+                <div class="tile-wrap">
+                    <div class="tile">
+                        <div class="tile-content-wrap"><img src="assets/img/wordpress-icon.png" alt="Wordpress иконка"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio">
+            <a href="#" name="portfolio"></a>
+            <h2>Портфолио</h2>
+            <div class="img-wrap">
+                <div class="img-container-wrap">
+                    <div class="img-container">
+                        <img src="assets/img/work-1.png" alt="">
+                        <div class="info">
+                            <h3>Персональный веб-сайт преподавателя</h3>
+                            <h4>CMS Wordpress / Верстка</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-container-wrap">
+                    <div class="img-container">
+                        <img src="assets/img/work-2.png" alt="">
+                        <div class="info">
+                            <h3>Веб-сайт продукта Biolica</h3>
+                            <h4>Верстка</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts">
+            <a href="#" name="contacts"></a>
+            <h2>Контакты</h2>
+            <img src="assets/img/telegram-qr-code.jpg" alt="QR-код Telegram">
+            <ul>
+                <li>E-mail: gi521fmp45@yandex.ru</li>
+                <li>Telegram: @gi521fmp45</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <span class="copyright">© gi521fmp45, 2023</span>
+        <span class="developer">E-mail разработчика: gi521fmp45@yandex.ru</span>
+    </footer>
+    <script src="assets/jquery/jquery.js"></script>
+    <script>
+        $(function(){
+		var $text = "Добро пожаловать на сайт-портфолио веб-разработчика gi521fmp45";
+		var $count = 0;
+		var $speed = 75;
+
+		function character(start, end, text) {
+			return text.substring(start,end);
+		}
+		function type() {
+			setTimeout(type, $speed);
+			$('#typeCursor').before(character($count, $count+1, $text));
+			$count++;
+		}
+		type();
+	});
+    </script>
+</body>
+</html>

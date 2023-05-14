@@ -1,0 +1,276 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: white;
+  margin-bottom: -115px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+header nav {
+  height: 90px;
+  margin-right: 75px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+}
+header nav ul li {
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-right: 1px solid black;
+  height: 50px;
+  line-height: 50px;
+}
+header nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-family: "Lucida Console";
+  font-weight: normal;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+}
+header nav ul li:first-child {
+  border-left: 1px solid black;
+}
+
+.greetings {
+  background-image: url(../img/background.jpg);
+  min-height: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.greetings h1 {
+  margin: 0;
+  color: white;
+  position: relative;
+  text-align: center;
+  font-family: "Lucida Console";
+  font-weight: normal;
+  font-size: 4.5rem;
+  line-height: 1.7;
+}
+.greetings h1 .type-cursor {
+  display: inline-block;
+  width: 5px;
+  height: 60px;
+  margin-left: 5px;
+  background-color: white;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.greetings:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  min-height: 1280px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.about-me {
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-top: 65px;
+  padding-bottom: 200px;
+}
+.about-me h2 {
+  margin: 0;
+  text-align: center;
+  font-family: "Lucida Console";
+  font-size: 3.75rem;
+  text-transform: uppercase;
+  margin-bottom: 65px;
+}
+.about-me .wrap {
+  display: flex;
+  align-items: center;
+}
+.about-me .wrap .computer-icon {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 25px;
+}
+.about-me .wrap p {
+  display: inline-block;
+  max-width: 1435px;
+  font-family: "Lucida Console";
+  font-size: 2.25rem;
+  font-weight: normal;
+  line-height: 1.2;
+  text-align: left;
+  text-transform: uppercase;
+  margin: 0;
+}
+.about-me .background-wrap {
+  text-align: center;
+  margin-top: 145px;
+}
+.about-me .background-wrap h3 {
+  background-color: #ecebea;
+  display: inline-block;
+  margin: 0;
+  padding-left: 65px;
+  padding-right: 65px;
+  padding-top: 40px;
+  padding-bottom: 25px;
+  font-family: "Lucida Console";
+  font-size: 3rem;
+  font-weight: normal;
+}
+.about-me .tiles {
+  background-color: #ecebea;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 55px;
+  padding-bottom: 35px;
+  padding-left: 20px;
+}
+.about-me .tiles .tile-wrap .tile {
+  background-color: white;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.portfolio {
+  background-color: #ecebea;
+  padding-top: 65px;
+  padding-bottom: 175px;
+}
+.portfolio h2 {
+  text-align: center;
+  margin: 0;
+  font-family: "Lucida Console";
+  font-weight: normal;
+  font-size: 3.75rem;
+  margin-bottom: 65px;
+}
+.portfolio .img-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 50px;
+}
+.portfolio .img-wrap .img-container-wrap {
+  margin-bottom: 50px;
+}
+.portfolio .img-wrap .img-container-wrap .img-container {
+  background-color: #c3c3c4;
+  width: 850px;
+  height: 425px;
+  margin-right: 50px;
+  position: relative;
+  overflow: hidden;
+}
+.portfolio .img-wrap .img-container-wrap .img-container img {
+  width: 100%;
+  height: 100%;
+}
+.portfolio .img-wrap .img-container-wrap .img-container .info {
+  background-color: white;
+  display: block;
+  width: 100%;
+  height: 140px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  display: block;
+  transition: margin-bottom, 0.5s;
+  margin-bottom: -140px;
+}
+.portfolio .img-wrap .img-container-wrap .img-container .info h3 {
+  font-family: "Lucida Console";
+  font-weight: normal;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+.portfolio .img-wrap .img-container-wrap .img-container .info h4 {
+  font-family: "Lucida Console";
+  font-weight: normal;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+.portfolio .img-wrap .img-container-wrap .img-container:hover .info {
+  transition: margin-bottom, 0.5s;
+  margin-bottom: 0;
+}
+
+.contacts {
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-top: 65px;
+  padding-bottom: 225px;
+}
+.contacts h2 {
+  text-align: center;
+  font-family: "Lucida Console";
+  font-weight: normal;
+  font-size: 3.75rem;
+  margin: 0;
+  margin-bottom: 65px;
+}
+.contacts img {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 50px;
+}
+.contacts ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.contacts ul li {
+  font-family: "Lucida Console";
+  font-weight: normal;
+  font-size: 2.25rem;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+}
+
+footer {
+  padding-left: 75px;
+  padding-right: 75px;
+  background-color: #3c3c3c;
+  height: 100px;
+  color: white;
+}
+footer span {
+  font-family: "Lucida Console";
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 100px;
+  text-transform: uppercase;
+}
+footer .developer {
+  float: right;
+}
